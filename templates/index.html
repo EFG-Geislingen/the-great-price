@@ -20,11 +20,12 @@
                 {% for point in point_values %}
                 <tr>
                     {% for topic in topics %}
-                        <td>
-                            <a href="{{ url_for('question', topic_id=topic.id, point=point) }}">
-                                {{ point }}
-                            </a>
-                        </td>
+                    <td class="{% if topic.id|string ~ '-' ~ point|string in answered %}answered{% endif %}">
+                        <a href="{% if topic.id|string ~ '-' ~ point|string in answered %}#{% else %}{{ url_for('question', topic_id=topic.id, point=point) }}{% endif %}">
+                            {{ point }}
+                        </a>
+                    </td>
+
                     {% endfor %}
                 </tr>
                 {% endfor %}

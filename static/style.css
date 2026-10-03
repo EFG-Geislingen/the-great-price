@@ -77,17 +77,8 @@ th {
 }
 
 td {
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
     text-align: center;
-}
-
-td:last-child {
-    border-right: none;
-}
-
-tr:last-child td {
-    border-bottom: none;
 }
 
 .point-label {
@@ -105,18 +96,22 @@ td a {
     font-size: 1.8rem;
     transition: var(--transition);
     padding: 2.5rem 0.5rem;
-    border-radius: 6px;
 }
 
-td:hover {
+td:hover:not(.answered) {
     transition: var(--transition);
     background-color: var(--accent-hover);
 }
 
-td:hover a {
-    color: white;
+td:hover:not(.answered) a {
     transform: scale(1.2);
     transition: var(--transition);
+}
+
+.answered a {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
 }
 
 /* --- Card-Styling (Fragen & Antworten) --- */
