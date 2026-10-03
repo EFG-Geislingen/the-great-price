@@ -145,6 +145,22 @@ td a:hover {
     margin-bottom: 0;
 }
 
+.answer-container {
+    text-align: center;
+}
+
+.question-preview {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.answer-text {
+    margin: 0;
+}
+
 /* --- Button-Styling --- */
 .actions {
     display: flex;

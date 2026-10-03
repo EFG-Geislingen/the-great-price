@@ -9,7 +9,10 @@
     <main class="card">
         <p class="category">Lösung: {{ topic_name }} ({{ point }} Punkte)</p>
         <div class="content">
-            {{ answer_text }}
+            <div class="answer-container">
+                <p class="question-preview">{{ question_text }}</p>
+                <p class="answer-text">{{ answer_text }}</p>
+            </div>
         </div>
         <div class="actions">
             <a href="{{ url_for('index') }}" class="button">Zurück zur Übersicht</a>

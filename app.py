@@ -71,14 +71,16 @@ def answer(topic_id, point):
     if question_index >= len(topic.get('questions', [])):
         abort(404)
 
-    answer_data = topic['questions'][question_index]
+    question_data = topic['questions'][question_index]
 
     return render_template(
-        'answer.html', 
-        topic_name=topic['name'], 
-        point=point, 
-        answer_text=answer_data['answer']
+        'answer.html',
+        topic_name=topic['name'],
+        point=point,
+        question_text=question_data['question'],
+        answer_text=question_data['answer']
     )
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
