@@ -58,6 +58,9 @@ table {
     border: 1px solid var(--border-color);
 }
 
+td:nth-child(odd) {
+    background-color: #f1f2f6;
+}
 
 th {
     background-color: var(--accent-color);
