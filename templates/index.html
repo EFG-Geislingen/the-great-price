@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Der Große Preis - Übersicht</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Der Große Preis</h1>
+        <table>
+            <thead>
+                <tr>
+                    {% for topic in topics %}
+                        <th>{{ topic.name }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for point in point_values %}
+                <tr>
+                    {% for topic in topics %}
+                        <td>
+                            <a href="{{ url_for('question', topic_id=topic.id, point=point) }}">
+                                {{ point }}
+                            </a>
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Frage - Der Große Preis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="card">
+        <p class="category">{{ topic_name }} | {{ point }} Punkte</p>
+        <div class="content">
+            {{ question_text }}
+        </div>
+        <div class="actions">
+            <a href="{{ url_for('answer', topic_id=topic_id, point=point) }}" class="button">Auflösen</a>
+            <a href="{{ url_for('index') }}" class="button secondary">Zurück</a>
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Lösung - Der Große Preis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="card">
+        <p class="category">Lösung: {{ topic_name }} ({{ point }} Punkte)</p>
+        <div class="content">
+            {{ answer_text }}
+        </div>
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="button">Zurück zur Übersicht</a>
+        </div>
+    </main>
+</body>
+</html>
+
