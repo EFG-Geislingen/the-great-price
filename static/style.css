@@ -118,6 +118,10 @@ td a:hover {
     width: 60%;
     border: 1px solid var(--border-color);
     animation: fadeIn 0.4s ease-out;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .category {
@@ -134,6 +138,11 @@ td a:hover {
     font-weight: 400;
     margin-bottom: 2.5rem;
     color: var(--text-color);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
 }
 
 /* --- Button-Styling --- */
