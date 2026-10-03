@@ -49,6 +49,7 @@ h1 {
 /* --- Tabellen-Styling (Index) --- */
 table {
     width: 100%;
+    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
     background-color: var(--card-bg);
@@ -57,6 +58,7 @@ table {
     overflow: hidden;
     border: 1px solid var(--border-color);
 }
+
 
 th {
     background-color: var(--accent-color);
