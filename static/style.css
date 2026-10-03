@@ -1,15 +1,13 @@
 :root {
     /* Farbpalette */
-    --bg-color: #f8f9fa;
-    --text-color: #2d3436;
-    --accent-color: #0984e3;
-    --accent-hover: #74b9ff;
-    --card-bg: #ffffff;
+    --bg-color: #000000;
+    --text-color: #fffcf0;
+    --accent-color: #fffcf0;
+    --accent-hover: #ffffff50;
+    --card-bg: #333338;
     --border-color: #dfe6e9;
-    --secondary-text: #636e72;
-    --btn-secondary: #b2bec3;
-    --btn-secondary-hover: #95a5a6;
-    
+    --secondary-text: #c0bcb0;
+
     /* Abstände & Radien */
     --radius: 12px;
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -32,6 +30,11 @@ body {
     line-height: 1.2;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 main {
     width: 90%;
     text-align: center;
@@ -43,6 +46,7 @@ h1 {
     letter-spacing: 1px;
     margin-bottom: 2rem;
     color: var(--text-color);
+    text-transform: uppercase;
 }
 
 /* --- Tabellen-Styling (Index) --- */
@@ -59,12 +63,12 @@ table {
 }
 
 td:nth-child(odd) {
-    background-color: #f1f2f6;
+    background-color: #77777730;
 }
 
 th {
     background-color: var(--accent-color);
-    color: white;
+    color: black;
     font-weight: 500;
     padding: 1.2rem;
     text-transform: uppercase;
@@ -100,7 +104,7 @@ td a {
     font-weight: 600;
     font-size: 1.8rem;
     transition: var(--transition);
-    padding: 1.5rem 0.5rem;
+    padding: 2.5rem 0.5rem;
     border-radius: 6px;
 }
 
@@ -161,7 +165,6 @@ td:hover a {
     color: var(--secondary-text);
     margin-bottom: 1rem;
     font-style: italic;
-    opacity: 0.8;
 }
 
 .answer-text {
@@ -177,32 +180,18 @@ td:hover a {
 
 .button {
     text-decoration: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 6px;
     font-weight: 500;
     transition: var(--transition);
     cursor: pointer;
     font-size: 1.2rem;
 }
 
-.button:not(.secondary) {
-    background-color: var(--accent-color);
-    color: white;
-}
-
-.button:not(.secondary):hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
+.button:hover {
+    transform: scale(1.1);
 }
 
 .button.secondary {
-    background-color: var(--btn-secondary);
-    color: white;
-}
-
-.button.secondary:hover {
-    background-color: var(--btn-secondary-hover);
-    transform: translateY(-2px);
+    color: var(--secondary-text);
 }
 
 /* Animation */
