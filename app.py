@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort, request, make_response
 import yaml
+import waitress
 
 app = Flask(__name__)
 POINT_VALUES = [20, 40, 60, 80, 100]
@@ -70,5 +71,5 @@ def answer(topic_id, point):
 
 if __name__ == '__main__':
     config = load_config()
-    app.run(debug=True, port=5000)
+    waitress.serve(app, port=5000)
 
