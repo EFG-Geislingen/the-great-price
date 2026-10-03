@@ -11,7 +11,7 @@
         <div class="content">
             <div class="answer-container">
                 <p class="question-preview">{{ question_text }}</p>
-                <p class="answer-text">{{ answer_text }}</p>
+                <p class="answer-text">{{ answer_text|safe }}</p>
             </div>
         </div>
         <div class="actions">
