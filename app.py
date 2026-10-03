@@ -16,7 +16,6 @@ def get_answered_questions():
 
 @app.route('/')
 def index():
-    config = load_config()
     topics = config.get('topics', [])
     for idx, topic in enumerate(topics):
         topic['id'] = idx
@@ -70,5 +69,6 @@ def answer(topic_id, point):
     return resp
 
 if __name__ == '__main__':
+    config = load_config()
     app.run(debug=True, port=5000)
 
