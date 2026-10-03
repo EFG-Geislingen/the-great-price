@@ -70,7 +70,6 @@ th {
 }
 
 td {
-    padding: 1.2rem;
     border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     text-align: center;
@@ -102,10 +101,15 @@ td a {
     border-radius: 6px;
 }
 
-td a:hover {
+td:hover {
+    transition: var(--transition);
     background-color: var(--accent-hover);
+}
+
+td:hover a {
     color: white;
-    transform: translateY(-2px);
+    transform: scale(1.2);
+    transition: var(--transition);
 }
 
 /* --- Card-Styling (Fragen & Antworten) --- */
