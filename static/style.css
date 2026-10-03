@@ -183,7 +183,7 @@ td:hover a {
     font-weight: 500;
     transition: var(--transition);
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .button:hover {
